@@ -8,21 +8,21 @@ Milestone: Basic Environment Setup + Pandas Verification + Project Theory Docume
 
 ✔ Pandas Installation Completed
 
-Installed using: pip install pandas.
+-Installed using: pip install pandas.
 
-Verified installation with: pip show pandas.
+-Verified installation with: pip show pandas.
 
-Confirmed version and package metadata.
+-Confirmed version and package metadata.
 
 ✔ Crypto Price History CSV Prepared
 
-Downloaded sample Bitcoin/Ethereum historical price dataset.
+-Downloaded sample Bitcoin/Ethereum historical price dataset.
 
-Saved CSV file into the project directory for testing.
+-Saved CSV file into the project directory for testing.
 
 ✔ Data Loading & Verification Script
 
-Created a Python script to:
+-Created a Python script to:
 
 import pandas 
 
@@ -30,11 +30,11 @@ load CSV using pd.read_csv()
 
 display first 5 rows using df.head().
 
-Successfully executed the script in VS Code/terminal.
+-Successfully executed the script in VS Code/terminal.
 
-Verified pandas functionality and version using pd.__version__.
+-Verified pandas functionality and version using pd.__version__.
 
-No errors — data displayed correctly.
+-No errors — data displayed correctly.
 
 
 DATE: 30-11-2025
@@ -45,16 +45,16 @@ DATE: 30-11-2025
 
 Python-based Crypto Portfolio Manager
 
-Uses native math tools, parallel risk checks, SQLite, CSV I/O
+-Uses native math tools, parallel risk checks, SQLite, CSV I/O
 
-Features: rule-based optimization, dynamic allocation, alerts, predictions
+-Features: rule-based optimization, dynamic allocation, alerts, predictions
 
 ✔ Sharpe Ratio
 
 Formula: 
 (𝑅𝑝−𝑅𝑓)/𝜎𝑝
 
-Measures risk-adjusted performance
+-Measures risk-adjusted performance
 
 
 >1 = good, >2 = excellent
@@ -63,10 +63,11 @@ Used in RiskChecker to guide asset weighting
 
 ✔ Parallel Risk Engine
 
-Parallel Processing Strategy (Real-Time Risk Engine)
+-Parallel Processing Strategy (Real-Time Risk Engine)
+
 Problem
 
-Sequential risk calculations slow down when analyzing multiple crypto assets simultaneously (BTC, ETH, ADA, etc.)
+-Sequential risk calculations slow down when analyzing multiple crypto assets simultaneously (BTC, ETH, ADA, etc.)
 
 Solution – ProcessPoolExecutor
 
@@ -88,16 +89,16 @@ with ProcessPoolExecutor(max_workers=4) as executor:
 
     sharpe_ratios = list(executor.map(calculate_sharpe, assets))
 
-Implemented using ProcessPoolExecutor
+-Implemented using ProcessPoolExecutor
 
-Runs Sharpe & volatility checks in parallel across assets
+-Runs Sharpe & volatility checks in parallel across assets
 
-Achieves ~4× speedup for BTC/ETH/ADA risk evaluations
+-Achieves ~4× speedup for BTC/ETH/ADA risk evaluations
 
 ✔ Data & Storage Plan
 
-Sources: BTC (GitHub), ETH (Kaggle)
+-Sources: BTC (GitHub), ETH (Kaggle)
 
-Pipeline: CSV → pandas → daily returns → SQLite (trends.db)
+-Pipeline: CSV → pandas → daily returns → SQLite (trends.db)
 
-Initial assets: BTC, ETH
+-Initial assets: BTC, ETH
