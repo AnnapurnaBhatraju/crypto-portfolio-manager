@@ -4,7 +4,7 @@ Date:22 Nov 2025
 
 Milestone: Basic Environment Setup + Pandas Verification + Project Theory Document
 
-✔ Milestone Summary (Pandas Setup & Verification)
+✔ Pandas Setup & Verification
 
 1. Pandas Installation Completed
 
@@ -24,7 +24,7 @@ Saved CSV file into the project directory for testing.
 
 Created a Python script to:
 
-import pandas (import pandas as pd)
+import pandas 
 
 load CSV using pd.read_csv()
 
@@ -36,60 +36,34 @@ Verified pandas functionality and version using pd.__version__.
 
 No errors — data displayed correctly.
 
+
+DATE: 30-11-2025
+
 🎯 Milestone-1 – Theory + Architecture Overview
 
-1. Project Overview
+✔ Project Overview
 
-Project Statement
+Python-based Crypto Portfolio Manager
 
-Crypto Portfolio Manager built using Python’s native math tools, parallel processing for simultaneous risk checks, SQLite for time-series storage, CSV imports/exports, automated email alerts, rule-based asset mixing, return predictions, and dynamic allocation strategies — all fully risk-aware and using no external trading-specific libraries.
+Uses native math tools, parallel risk checks, SQLite, CSV I/O
 
-Core Outcomes
+Features: rule-based optimization, dynamic allocation, alerts, predictions
 
-Rule-based portfolio optimization (maximize returns, minimize risk)
+✔ Sharpe Ratio
 
-Parallel risk analysis for high-speed evaluation
+Formula: 
+(𝑅𝑝−𝑅𝑓)/𝜎𝑝
 
-Customizable performance reports with rebalancing suggestions
+Measures risk-adjusted performance
 
-Automated alert system (risk spikes, return drops)
 
-Intelligent allocation rules based on Sharpe Ratio & predictions
+>1 = good, >2 = excellent
 
-2. Sharpe Ratio – Theory & Module Plan
-Formula
-Sharpe Ratio=Rp-Rf/𝜎𝑝	​
+Used in RiskChecker to guide asset weighting
 
-Parameters:
+✔ Parallel Risk Engine
 
-Rp – Portfolio Return
-(Example values: BTC 0.21% daily, ETH 0.51% daily)
-
-Rf – Risk-free Rate
-(3–5% US Treasury yield)
-
-σp – Standard Deviation of portfolio returns
-
-Interpretation
-
-Sharpe > 1.0: Good, acceptable risk-adjusted returns
-
-Sharpe > 2.0: Excellent
-
-Example:
-
-BTC Return = 15%
-Risk-Free = 5%
-Volatility = 12%
-→ Sharpe ≈ 0.83 (needs better diversification)
-
-Usage in Project
-
-Integrated into a RiskChecker module.
-
-Output helps determine weight allocation during mixing.
-
-3. Parallel Processing Strategy (Real-Time Risk Engine)
+Parallel Processing Strategy (Real-Time Risk Engine)
 Problem
 
 Sequential risk calculations slow down when analyzing multiple crypto assets simultaneously (BTC, ETH, ADA, etc.)
@@ -110,33 +84,16 @@ assets = [btc_prices, eth_prices, ada_prices]
 with ProcessPoolExecutor(max_workers=4) as executor:
     sharpe_ratios = list(executor.map(calculate_sharpe, assets))
 
-Benefit
+Implemented using ProcessPoolExecutor
 
-Achieved 4× speedup on a quad-core CPU.
+Runs Sharpe & volatility checks in parallel across assets
 
-Integrated into Investment Mix Calculator for faster evaluations.
+Achieves ~4× speedup for BTC/ETH/ADA risk evaluations
 
-4. Data Plan & Preprocessing Decisions
-Primary Data Sources
+✔ Data & Storage Plan
 
-Bitcoin: GitHub (daily prices, 2010–present)
+Sources: BTC (GitHub), ETH (Kaggle)
 
-Ethereum: Kaggle (minute-level OHLC data)
+Pipeline: CSV → pandas → daily returns → SQLite (trends.db)
 
-Storage Choice
-
-SQLite database: trends.db
-
-Stores processed prices, daily returns, and volatility.
-
-Processing Pipeline
-Raw CSV  
-→ pandas DataFrame  
-→ daily returns using price.pct_change()  
-→ SQLite storage  
-
-Initial Assets for Analysis
-
-BTC
-
-ETH 
+Initial assets: BTC, ETH
