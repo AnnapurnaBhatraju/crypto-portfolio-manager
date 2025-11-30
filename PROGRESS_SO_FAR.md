@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Progress - Shivani
 
 ## Date: 21 Nov 2025
@@ -36,4 +37,6 @@
 - Verified terminal output confirming successful insertion.
 - Checked MongoDB Atlas and confirmed creation of database, collection, and documents.
 
+=======
+>>>>>>> origin/mayank
 
