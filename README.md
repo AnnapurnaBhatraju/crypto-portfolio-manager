@@ -1,3 +1,2 @@
 # crypto-portfolio-manager
-i have completed my frontend part.
-
+Infosys Springboard 6.0 Project: Python Crypto Investment Manager
