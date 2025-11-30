@@ -1,12 +1,12 @@
-Progress-Chetana
+PROGRESS-Chetana
 
-Date:22 Nov 2025
+DATE:22 Nov 2025
 
 Milestone: Basic Environment Setup + Pandas Verification + Project Theory Document
 
 ✔ Pandas Setup & Verification
 
-1. Pandas Installation Completed
+✔ Pandas Installation Completed
 
 Installed using: pip install pandas.
 
@@ -14,13 +14,13 @@ Verified installation with: pip show pandas.
 
 Confirmed version and package metadata.
 
-2. Crypto Price History CSV Prepared
+✔ Crypto Price History CSV Prepared
 
 Downloaded sample Bitcoin/Ethereum historical price dataset.
 
 Saved CSV file into the project directory for testing.
 
-3. Data Loading & Verification Script
+✔ Data Loading & Verification Script
 
 Created a Python script to:
 
@@ -73,15 +73,19 @@ Solution – ProcessPoolExecutor
 Bypasses Python GIL; enables true parallel CPU-based tasks.
 
 from concurrent.futures import ProcessPoolExecutor
+
 import numpy as np
 
 def calculate_sharpe(asset_prices):
+
     returns = np.diff(np.log(asset_prices))
+
     return (returns.mean() - 0.03) / returns.std()
 
 assets = [btc_prices, eth_prices, ada_prices]
 
 with ProcessPoolExecutor(max_workers=4) as executor:
+
     sharpe_ratios = list(executor.map(calculate_sharpe, assets))
 
 Implemented using ProcessPoolExecutor
