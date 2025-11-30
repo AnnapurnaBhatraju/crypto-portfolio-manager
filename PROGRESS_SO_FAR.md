@@ -1,42 +1,19 @@
-<<<<<<< HEAD
-# Progress - Shivani
+# Crypto-Portfolio Manager Project Progress Log
 
-## Date: 21 Nov 2025
+## Coordinator Progress - Annapurna Bhatraju
 
-### ✔ MongoDB Setup Completed
-- Created database user and provided appropriate access.
-- Added IP Access List (Current IP + Allow From Anywhere temporarily).
-- Successfully connected to MongoDB using the pymongo driver.
+### I. Milestone 1: Setup and Verification (Completed)
 
-### ✔ Password Security Setup
-- Created `config.json` to securely store MongoDB username and password.
-- Added `config.json` to `.gitignore` to prevent credentials from being pushed to GitHub.
-- Updated `db_connect.py` to load credentials safely from JSON.
+* **0: Frontend Environment:** Successfully installed Node.js and verified the base React setup is functional.
+* **1: Database Connectivity:** Successfully confirmed the MongoDB Atlas connection using Shivani's credentials.
+* **2. Data Pipeline Prep:** Verified successful real-time data fetch using the CoinGecko API (`test_coin_gecko.py`).
+* **3. Git Integration:** Successfully performed merge of all teammate branches (`shivani` and `mayank`) into the local `annapurna` branch for testing.
 
-### ✔ Testing & Verification
-- Executed `db_connect.py` to test MongoDB connection.
-- Connection successful and sample data inserted into MongoDB cluster.
+### II. Team Component Verification
 
----
+* **Verification of DB Insert (Shivani):** Confirmed successful insertion of the 4 test user documents (email, password, role) into the MongoDB `users` collection.
+* **Verification of FE Component (Mayank):** Confirmed the `LoginPage.jsx` component is correctly structured with data capture (`useState`) and the function link (`handleLogin`).
 
-## Date: 30 Nov 2025
+### III. Current Task (Integration)
 
-### ✔ MongoDB Users Insertion Script Completed
-- Created `insert_users.py` to insert four user documents into the `users` collection.
-- Used `db_connect.py` for secure MongoDB Atlas connection through credentials stored in `config.json`.
-- Successfully inserted user documents for: Annapurna, Mayank, Shivani, and Chetana.
-- Verified all 4 documents inside `teamcrypto_db` → `users` collection on MongoDB Atlas.
-
-### ✔ GitHub Integration Completed
-- Added and committed new files (`insert_users.py`, `db_connect.py`, `.gitignore` updates).
-- Pushed changes to the `shivani` development branch.
-- Created Pull Request titled **“Added MongoDB Users Insertion Script”** for review and merge.
-
-### ✔ Testing & Validation
-- Ran `python insert_users.py` to test the insertion script.
-- Verified terminal output confirming successful insertion.
-- Checked MongoDB Atlas and confirmed creation of database, collection, and documents.
-
-=======
->>>>>>> origin/mayank
-
+* **Action:** Currently building the **FastAPI/JWT backend** to link the verified React frontend to the verified MongoDB database for the final security check.
