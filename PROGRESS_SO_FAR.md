@@ -1,4 +1,4 @@
-# PROGRESS - MAYANK 
+# Progress - MAYANK 
 ## DATE : 01 DEC 2025
 ## ✔ Basic React Login Frontend Setup 
 
