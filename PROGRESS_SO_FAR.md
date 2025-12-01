@@ -1,4 +1,5 @@
-✔ Basic React Login Frontend Setup Summary
+## ✔ Basic React Login Frontend Setup Summary
+
 ✔ Project Initialization
 
 Created a new React project using Create React App.
