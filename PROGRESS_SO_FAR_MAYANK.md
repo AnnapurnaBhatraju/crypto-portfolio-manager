@@ -22,6 +22,7 @@ The login form is now ready to connect with:
 - JWT login
 - Any backend login system
 
+<hr>
 
 ## DATE : 22 DEC 2025
 ## ✔ React Crypto Portfolio Optimizer Setup
