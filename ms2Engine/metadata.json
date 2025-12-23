@@ -1,0 +1,6 @@
+
+{
+  "name": "CryptoQuant - MS2 Math & Concurrency",
+  "description": "Milestone 2 core implementation: Log Returns, 10k Monte Carlo simulations, and parallel multiprocessing optimization.",
+  "requestFramePermissions": []
+}
