@@ -1,5 +1,5 @@
 """
- MILESTONE 2: MATH & CONCURRENCY ENGINE - 100% COMPLETE
+ MATH & CONCURRENCY ENGINE 
  1. Log Returns from dataset.csv
  2. Monte Carlo Simulation (10,000 iterations)
  3. Multiprocessing (parallel execution)
@@ -12,9 +12,9 @@ from multiprocessing import Pool, cpu_count
 import time
 from pathlib import Path
 
-# ========================================
+
 # 1. LOG RETURNS CALCULATOR
-# ========================================
+
 def calculate_log_returns(csv_path: str = "dataset.csv"):
     """Calculate log returns: ln(Pt / Pt-1) for all coins"""
     print(" STEP 1: Calculating Log Returns from dataset.csv")
@@ -41,9 +41,9 @@ def calculate_log_returns(csv_path: str = "dataset.csv"):
 
     return log_returns, coins
 
-# ========================================
+
 # 2–4. PARALLEL MONTE CARLO ENGINE
-# ========================================
+
 def portfolio_sharpe(args):
     """Single portfolio calculation (runs in parallel process)"""
     weights, returns_df, cov_matrix, risk_free_rate = args
@@ -77,7 +77,7 @@ def find_max_sharpe_weights(
 
     all_results = []
 
-    print(f"   ⚡ Using {n_processes} CPU processes")
+    print(f"    Using {n_processes} CPU processes")
 
     # Parallel execution
     with Pool(processes=n_processes) as pool:
@@ -122,9 +122,9 @@ def find_max_sharpe_weights(
         "processing_time_seconds": elapsed_time,
     }
 
-# ========================================
+
 # MAIN EXECUTION
-# ========================================
+
 def main():
     print(" " * 20)
     print("   MILESTONE 2: MATH & CONCURRENCY ENGINE")
@@ -185,3 +185,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
