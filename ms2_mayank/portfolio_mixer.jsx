@@ -1,4 +1,4 @@
-//  must install to run in react
+//  must install to run in react file
 // npm install recharts react-select react-currency-input-field
 
 import React, { useState } from 'react';
