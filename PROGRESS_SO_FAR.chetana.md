@@ -102,3 +102,17 @@ with ProcessPoolExecutor(max_workers=4) as executor:
 -Pipeline: CSV → pandas → daily returns → SQLite (trends.db)
 
 -Initial assets: BTC, ETH
+
+🎯22 December 2025
+Milestone-2:Math & Concurrency Engine 
+
+✔Developed a Python module to compute logarithmic returns from dataset.csv for multiple assets.
+
+✔Implemented a Monte Carlo portfolio optimization framework with 10,000 simulation iterations to identify the portfolio configuration yielding the maximum Sharpe Ratio.
+
+✔Leveraged Python’s multiprocessing library to execute Monte Carlo trials concurrently, significantly improving computational efficiency.
+
+✔Designed a modular function that accepts a list of coins/assets as input and returns the optimal portfolio weights corresponding to the maximum Sharpe Ratio.
+
+✔Verified the accuracy of mathematical computations (returns, volatility, Sharpe Ratio) and validated correct parallel execution.
+✔Finalized and pushed the verified .py implementation to the designated feature branch.
