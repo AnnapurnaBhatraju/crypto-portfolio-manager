@@ -103,7 +103,8 @@ with ProcessPoolExecutor(max_workers=4) as executor:
 
 -Initial assets: BTC, ETH
 
-🎯22 December 2025
+🎯DATE:22 December 2025
+
 Milestone-2:Math & Concurrency Engine 
 
 ✔Developed a Python module to compute logarithmic returns from dataset.csv for multiple assets.
@@ -115,4 +116,6 @@ Milestone-2:Math & Concurrency Engine
 ✔Designed a modular function that accepts a list of coins/assets as input and returns the optimal portfolio weights corresponding to the maximum Sharpe Ratio.
 
 ✔Verified the accuracy of mathematical computations (returns, volatility, Sharpe Ratio) and validated correct parallel execution.
+
 ✔Finalized and pushed the verified .py implementation to the designated feature branch.
+
