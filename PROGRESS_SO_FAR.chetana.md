@@ -119,3 +119,30 @@ Milestone-2:Math & Concurrency Engine
 
 ✔Finalized and pushed the verified .py implementation to the designated feature branch.
 
+🎯Date: 25 December 2025
+
+✅ Role: Financial Logic Architect
+
+Module: Risk Logic & Manual Override
+
+✔ Tasks Completed
+
+Risk Status Engine
+
+Implemented badge-based risk classification by comparing MS2 simulated prices with live prices (currently mocked, replaceable with CoinGecko).
+
+Risk levels:
+
+🟢 Stable (< 2%)
+
+🟡 Warning (2–5%)
+
+🔴 Danger (> 5%)
+
+Logic is modular and does not affect MS1 or MS2.
+
+Manual Investment Override
+
+Built a React form for manual portfolio allocation.
+
+Added validation to ensure total allocation equals 100% before saving.
