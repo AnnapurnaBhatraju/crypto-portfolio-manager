@@ -105,7 +105,7 @@ with ProcessPoolExecutor(max_workers=4) as executor:
 
 🎯DATE:22 December 2025
 
-Milestone-2:Math & Concurrency Engine 
+MILESTONE-2:Math & Concurrency Engine 
 
 ✔Developed a Python module to compute logarithmic returns from dataset.csv for multiple assets.
 
@@ -121,7 +121,9 @@ Milestone-2:Math & Concurrency Engine
 
 🎯Date: 25 December 2025
 
-✅ Role: Financial Logic Architect
+✅ MILESTONE-3:
+
+Role: Financial Logic Architect
 
 Module: Risk Logic & Manual Override
 
@@ -146,3 +148,4 @@ Manual Investment Override
 Built a React form for manual portfolio allocation.
 
 Added validation to ensure total allocation equals 100% before saving.
+
