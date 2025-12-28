@@ -36,4 +36,18 @@
 - Verified terminal output confirming successful insertion.
 - Checked MongoDB Atlas and confirmed creation of database, collection, and documents.
 
+  ---
 
+## Date: 27 Dec 2025
+
+### ✔ Milestone 3 – Report Generation & Alert Service
+
+- Created a separate folder `ms3_shivani` to organize Milestone 3 implementation.
+- Implemented CSV report generation using FastAPI with `StreamingResponse`.
+- The generated report includes coin name, initial price, current price, P&L percentage, and risk status.
+- Used sample portfolio data to validate the report format as per milestone requirements.
+
+- Implemented backend email alert functionality using Python `smtplib`.
+- Alert is triggered automatically when any asset is marked as high risk (Danger).
+- Email content includes asset details and risk warning message.
+- The logic is designed to integrate with the risk status output from the Risk Engine module.
