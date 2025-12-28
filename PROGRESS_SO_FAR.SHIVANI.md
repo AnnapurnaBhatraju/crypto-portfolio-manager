@@ -40,14 +40,15 @@
 
 ## Date: 27 Dec 2025
 
-### ✔ Milestone 3 – Report Generation & Alert Service
+### ✔ Report Generation & Alert Service
 
-- Created a separate folder `ms3_shivani` to organize Milestone 3 implementation.
-- Implemented CSV report generation using FastAPI with `StreamingResponse`.
+- Created a separate folder `ms3_shivani` to organize the implementation work.
+- Developed CSV report generation using FastAPI with `StreamingResponse`.
 - The generated report includes coin name, initial price, current price, P&L percentage, and risk status.
-- Used sample portfolio data to validate the report format as per milestone requirements.
+- Used sample portfolio data to verify the report format and output.
 
 - Implemented backend email alert functionality using Python `smtplib`.
-- Alert is triggered automatically when any asset is marked as high risk (Danger).
-- Email content includes asset details and risk warning message.
-- The logic is designed to integrate with the risk status output from the Risk Engine module.
+- Alert is triggered automatically when an asset is identified as high risk (Danger).
+- Email content includes asset details and a risk warning message.
+- The implementation is designed to work with the risk status provided by the backend logic.
+
