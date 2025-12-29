@@ -48,8 +48,26 @@ Where $R_p$ is portfolio return, $R_f$ is risk-free rate, and $\sigma_p$ is port
 
 ---
 
-## Next Focus
-We are proceeding to **Milestone 3 (Module 2: Risk Monitoring & Alerts)** to integrate live API feeds for real-time tracking.
+## 🟡 MILESTONE 3: Module 2 - Risk Monitoring & Alerts
+The final module enables live tracking, professional file saving, and urgent risk alerts.
+
+| Milestone 3 Requirement | Technical Implementation | Status |
+| :--- | :--- | :--- |
+| **Risk Checker** | Uses parallel tasks to fetch live prices and apply status badges. | **COMPLETED** |
+| **Identity System** | Persistent user login/signup with hashed password security. | **COMPLETED** |
+| **Predictor** | Predicts profitable mixes from historical `dataset.csv` changes. | **COMPLETED** |
+| **Simple Database** | Portfolio trends and removals are synced instantly to the cloud. | **COMPLETED** |
+| **File Saver** | Generates clean, text-based CSV reports for Excel compatibility. | **COMPLETED** |
+| **Alert Link** | Immediate email notifications for **DANGER** zone assets. | **COMPLETED** |
+
+### Live Risk Logic
+The Risk Engine evaluates assets using a percentage-based threshold system:
+* 🟢 **STABLE**: Price increase > 5% since purchase.
+* 🟡 **WARNING**: Price within +/- 5% of purchase price.
+* 🔴 **DANGER**: Price drop > 5% (Triggers immediate email alert).
+
+---
+
 ### Project Documentation
 * [Google Drive Documentation (Team Log)](https://drive.google.com/drive/folders/1_WbgdxV89VtGe2Fkis5hRO7FPAJBTwbS)
 
