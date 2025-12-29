@@ -46,3 +46,36 @@ The login form is now ready to connect with:
 - Rendered an interactive Pie Chart to visualize the percentage split.
 - Created a dynamic "Exact Distribution" list to display the precise dollar value per coin.
 - Added customized tooltips and legends for a better user experience.
+
+<hr>
+
+## DATE : 26 DEC 2025
+
+## ✔ Backend Crypto Calculator Architecture Setup
+
+✔ Project Structure & Core Dependencies
+- Configured Node.js backend with modular service based architecture.
+- Integrated Express for API routing and middleware handling.
+- Installed Axios for external crypto market API consumption.
+- Configured dotenv for secure environment variable management.
+
+✔ Database Design & Integration
+- Designed normalized database schema for Bitcoin historical price data.
+- Integrated PostgreSQL using Prisma ORM for type safe queries.
+- Implemented indexed timestamp based queries for fast historical lookups.
+- Added fallback logic to detect missing data ranges in the database.
+
+✔ Bitcoin Data Validation Layer
+- Built data consistency checks between stored BTC prices and live API values.
+- Implemented timestamp reconciliation to prevent stale or duplicate entries.
+- Added sanity thresholds to reject abnormal price spikes or malformed API responses.
+
+✔ API Decision Engine
+- Created a decision layer that dynamically chooses between database data or live API calls.
+- Prioritized database reads for historical calculations to reduce API costs.
+- Triggered external API calls only when database data is outdated or incomplete.
+- Logged API decisions for monitoring and optimization insights.
+
+
+
+
