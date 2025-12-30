@@ -50,7 +50,6 @@ The login form is now ready to connect with:
 <hr>
 
 ## DATE : 26 DEC 2025
-
 ## ✔ Backend Crypto Calculator Architecture Setup
 
 ✔ Project Structure & Core Dependencies
@@ -75,6 +74,33 @@ The login form is now ready to connect with:
 - Prioritized database reads for historical calculations to reduce API costs.
 - Triggered external API calls only when database data is outdated or incomplete.
 - Logged API decisions for monitoring and optimization insights.
+
+<hr>
+
+## DATE : 31 DEC 2025
+## ✔ Milestone 4: Spreading Rule Setter & Stress Testing UI
+
+### ✔ Spreading Rule Interface ("AI Strategy Mixer")
+- **Developed StrategyMixer.js Component:**
+  - Created a dedicated interface for setting rebalancing rules.
+  - Implemented a **Risk Appetite Slider** (0-100) that abstracts complex math into a simple user control.
+  - Added CSS styling for a "Financial Terminal" look (Dark mode, gradients).
+
+### ✔ Dynamic Data & Automation Logic
+- **Dynamic Asset Loading:**
+  - Updated the component to fetch the user's previously selected assets (e.g., BTC, ETH, SOL) from the database/state instead of hardcoding them.
+  - Implemented `useEffect` to handle the asynchronous loading state.
+- **Auto-Calculation Algorithm:**
+  - Wrote logic to automatically calculate the split between **Stablecoins (Safety)** and **Volatile Assets (Risk)** based on the slider input.
+  - Visualized these calculations instantly using dynamic progress bars.
+
+### ✔ Stress Testing & Dynamic Feedback
+- **Scenario Simulation UI:**
+  - Added controls to test "Hard Situations" (e.g., "Simulate Market Crash" / "Bull Run").
+  - Created visual alert systems (`rebalanceTrigger`) to show users exactly when a rule would trigger a Buy/Sell action.
+- **Visual Tolerance Markers:**
+  - Implemented CSS markers on asset bars to visually indicate the "Safe Zone" vs. "Rebalance Zone."
+
 
 
 
