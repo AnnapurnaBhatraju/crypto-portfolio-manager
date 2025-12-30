@@ -1,0 +1,162 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* StrategyMixer.css */
+.mixer-container {
+  background-color: #16213e;
+  padding: 25px;
+  border-radius: 12px;
+  color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.control-panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+/* Custom Risk Slider */
+.slider-group {
+  flex: 1;
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.risk-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #4caf50 0%, #ffeb3b 50%, #f44336 100%);
+  outline: none;
+  margin: 20px 0;
+}
+
+.risk-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.risk-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #a0a0a0;
+}
+
+/* Visualization Bars */
+.viz-group {
+  flex: 1;
+}
+
+.asset-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.asset-label {
+  width: 60px;
+  font-weight: bold;
+}
+
+.bar-container {
+  flex-grow: 1;
+  background-color: #0f3460;
+  height: 24px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.bar-fill {
+  height: 100%;
+  transition: width 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 5px;
+  font-size: 0.75rem;
+  color: rgba(0,0,0,0.7);
+  font-weight: bold;
+}
+
+/* Tolerance Markers (The Visual Feedback) */
+.tolerance-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgba(255,255,255,0.3);
+  z-index: 2;
+}
+
+.scenario-badge {
+  background-color: #e94560;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
