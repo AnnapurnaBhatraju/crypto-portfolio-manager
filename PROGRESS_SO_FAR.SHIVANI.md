@@ -36,4 +36,19 @@
 - Verified terminal output confirming successful insertion.
 - Checked MongoDB Atlas and confirmed creation of database, collection, and documents.
 
+  ---
+
+## Date: 27 Dec 2025
+
+### ✔ Report Generation & Alert Service
+
+- Created a separate folder `ms3_shivani` to organize the implementation work.
+- Developed CSV report generation using FastAPI with `StreamingResponse`.
+- The generated report includes coin name, initial price, current price, P&L percentage, and risk status.
+- Used sample portfolio data to verify the report format and output.
+
+- Implemented backend email alert functionality using Python `smtplib`.
+- Alert is triggered automatically when an asset is identified as high risk (Danger).
+- Email content includes asset details and a risk warning message.
+- The implementation is designed to work with the risk status provided by the backend logic.
 
