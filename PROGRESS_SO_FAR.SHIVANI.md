@@ -47,6 +47,21 @@
 - The generated report includes coin name, initial price, current price, P&L percentage, and risk status.
 - Used sample portfolio data to verify the report format and output.
 
+ ## Date: 01 Jan 2026
+
+✔ Backend Rule Logic & Integration Support
+
+Implemented rule-based backend logic to rebalance the investment portfolio based on market volatility.
+
+Created a rule engine (`rules_engine.py`) to handle threshold-based reallocation of assets during HIGH and MEDIUM volatility conditions.
+
+Added a service wrapper (`rules_api.py`) to expose the rule logic in a reusable format, enabling easy integration with the main FastAPI application.
+
+Synced the local branch with remote updates, resolved merge changes, and successfully pushed the updated code to the `shivani` branch.
+
+Created a Pull Request for the backend rule logic implementation for team review.
+
+
 - Implemented backend email alert functionality using Python `smtplib`.
 - Alert is triggered automatically when an asset is identified as high risk (Danger).
 - Email content includes asset details and a risk warning message.
