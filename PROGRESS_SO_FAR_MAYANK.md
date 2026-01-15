@@ -99,7 +99,8 @@ The login form is now ready to connect with:
   - Added controls to test "Hard Situations" (e.g., "Simulate Market Crash" / "Bull Run").
   - Created visual alert systems (`rebalanceTrigger`) to show users exactly when a rule would trigger a Buy/Sell action.
 - **Visual Tolerance Markers:**
-  - Implemented CSS markers on asset bars to visually indicate the "Safe Zone" vs. "Rebalance Zone."
+  - Created smooth CSS transitions for allocation bars (width animations).
+  - Implemented color-coded visual cues: Green (Stable/Safe), Orange (BTC), Purple (Large Cap), Blue (Volatile).
 
 
 
