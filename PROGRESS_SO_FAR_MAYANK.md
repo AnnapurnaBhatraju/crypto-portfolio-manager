@@ -91,7 +91,7 @@ The login form is now ready to connect with:
   - Updated the component to fetch the user's previously selected assets (e.g., BTC, ETH, SOL) from the database/state instead of hardcoding them.
   - Implemented `useEffect` to handle the asynchronous loading state.
 - **Auto-Calculation Algorithm:**
-  - Wrote logic to automatically calculate the split between **Stablecoins (Safety)** and **Volatile Assets (Risk)** based on the slider input.
+  
   - Visualized these calculations instantly using dynamic progress bars.
 
 ### ✔ Stress Testing & Dynamic Feedback
