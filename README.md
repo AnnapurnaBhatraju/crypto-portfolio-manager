@@ -82,9 +82,9 @@ It introduces advanced user autonomy through dynamic rule setting ("Rule Based M
 **🧠 Core Logic: The Rule Engine**
 The Rule-Based Mixer uses a Constraint Satisfaction Algorithm to generate portfolios:
 
-- Priority 1 (Fixed Constraints): All rules defining a specific dollar amount (e.g., "$2000 in ETH") are deducted from the Total Budget first.
-- Priority 2 (Percentage Constraints): Remaining budget is calculated. Specific percentage rules (e.g., "50% BTC") are applied to the remaining amount (or total, depending on user configuration).
-- Priority 3 (The "Remaining" Bucket): Any capital left over after Priority 1 & 2 is swept into the specific asset defined as "Remaining" (e.g., USDT) to ensure 0% wasted capital.
+- **Priority 1 (Fixed Constraints)**: All rules defining a specific dollar amount (e.g., "$2000 in ETH") are deducted from the Total Budget first.
+- **Priority 2 (Percentage Constraints)**: Remaining budget is calculated. Specific percentage rules (e.g., "50% BTC") are applied to the remaining amount (or total, depending on user configuration).
+- **Priority 3 (The "Remaining" Bucket)**: Any capital left over after Priority 1 & 2 is swept into the specific asset defined as "Remaining" (e.g., USDT) to ensure 0% wasted capital.
 
 **🛡️ Core Logic: Stress Testing (Strategy Mixer)**
 The system allows users to rebalance their existing portfolio based on market volatility predictions:
