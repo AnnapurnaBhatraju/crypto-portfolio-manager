@@ -1,0 +1,316 @@
+/* StrategyMixer.css - Royal Blue & Gold Theme */
+
+/* Import existing variables for consistency */
+/* In a real project, these would often be in a shared 'variables.css' file */
+:root {
+  /* BACKGROUNDS */
+  --bg-dark: #020c1b;        /* Deep Navy */
+  --bg-panel: #0a192f;       /* Panel Blue */
+  --bg-lighter: #112240;     /* Highlight Blue */
+  
+  /* ACCENTS */
+  --gold-primary: #d4af37;   /* Metallic Gold */
+  --gold-light: #fbeda4;     /* Champagne */
+  --gold-dim: #8a7018;       /* Bronze */
+  
+  /* TEXT */
+  --text-main: #e6f1ff;
+  --text-muted: #8892b0;
+
+  /* Strategy Specific Colors (from your inline styles) */
+  --strategy-safe-color: #43a047;     /* Green for SAFE */
+  --strategy-balanced-color: #1976D2; /* Blue for BALANCED */
+  --strategy-risk-color: #d32f2f;     /* Red for RISK */
+
+  /* Coin-specific bar colors */
+  --coin-stable-color: #26a17b; /* Green for USDT/USDC */
+  --coin-btc-color: #f2a900;    /* Orange for BTC */
+  --coin-eth-color: #627eea;    /* Blue for ETH */
+  --coin-alt-color: #ff4081;    /* Pink/Red for other Alts */
+
+  /* General UI Colors */
+  --ui-text-dark: #2c3e50; /* For header text, etc. - using a dark grey */
+  --ui-border-light: #eee;
+  --ui-bg-light: #fafafa;
+}
+
+.strategy-mixer-container {
+  padding: 25px;
+  max-width: 850px;
+  margin: 0 auto;
+  background: var(--bg-panel); /* Consistent panel background */
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* Darker shadow */
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-main);
+}
+
+/* --- HEADER --- */
+.mixer-header {
+  text-align: center;
+  border-bottom: 1px solid var(--bg-lighter); /* Lighter border */
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.mixer-header h2 {
+  margin: 0;
+  color: var(--gold-primary); /* Gold for the main title */
+  font-size: 1.8rem;
+}
+
+.mixer-header .total-capital {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.mixer-header .total-capital span {
+  font-weight: bold;
+  color: var(--gold-light); /* Lighter gold for value */
+  font-size: 1.1rem;
+}
+
+/* --- STRATEGY BUTTONS --- */
+.strategy-buttons-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 35px;
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.strategy-btn {
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: 2px solid; /* Border color will be set by specific mode */
+  background: transparent; /* Default transparent */
+  color: var(--text-main); /* Default text color */
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: none;
+}
+
+/* Specific button colors and active states */
+.strategy-btn.safe {
+  border-color: var(--strategy-safe-color);
+  color: var(--strategy-safe-color);
+}
+.strategy-btn.safe.active {
+  background: var(--strategy-safe-color);
+  color: var(--bg-dark);
+  box-shadow: 0 4px 15px var(--strategy-safe-color)60;
+}
+
+.strategy-btn.balanced {
+  border-color: var(--strategy-balanced-color);
+  color: var(--strategy-balanced-color);
+}
+.strategy-btn.balanced.active {
+  background: var(--strategy-balanced-color);
+  color: var(--bg-dark);
+  box-shadow: 0 4px 15px var(--strategy-balanced-color)60;
+}
+
+.strategy-btn.risk {
+  border-color: var(--strategy-risk-color);
+  color: var(--strategy-risk-color);
+}
+.strategy-btn.risk.active {
+  background: var(--strategy-risk-color);
+  color: var(--bg-dark);
+  box-shadow: 0 4px 15px var(--strategy-risk-color)60;
+}
+
+.strategy-btn:not(.active):hover {
+  background: rgba(212, 175, 55, 0.1); /* Subtle gold hover for inactive */
+  transform: translateY(-2px);
+}
+
+/* --- ALLOCATION BREAKDOWN --- */
+.allocation-breakdown-container {
+  background: var(--bg-dark); /* Darker background for breakdown */
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--bg-lighter);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.2); /* Inset shadow for depth */
+}
+
+.allocation-breakdown-container h4 {
+  margin-top: 0;
+  color: var(--gold-primary);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.2rem;
+}
+
+.allocation-breakdown-container h4 .live-price-note {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: var(--text-muted);
+}
+
+.allocation-item {
+  margin-bottom: 20px;
+}
+.allocation-item:last-child {
+  margin-bottom: 0; /* No margin for the last item */
+}
+
+.allocation-info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.coin-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coin-details .coin-name {
+  font-weight: bold;
+  color: var(--text-main);
+}
+
+.coin-details .live-price-badge {
+  font-size: 11px;
+  background: var(--bg-lighter); /* Lighter background for badge */
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.target-details {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.target-details .target-percent {
+  font-weight: bold;
+  color: var(--gold-light); /* Lighter gold for percentage */
+  font-size: 1.1rem;
+}
+
+.target-details .target-amount {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-left: 8px;
+}
+
+/* --- BAR METER --- */
+.bar-meter-container {
+  width: 100%;
+  height: 24px;
+  background: var(--bg-panel); /* Panel background for empty bar */
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.fill-bar {
+  height: 100%;
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  color: var(--bg-dark); /* Dark text on bright bar */
+  font-size: 11px;
+  font-weight: bold;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+/* Dynamic bar colors via JS, but good to have a default/fallback */
+.fill-bar.stable { background: var(--coin-stable-color); }
+.fill-bar.btc { background: var(--coin-btc-color); }
+.fill-bar.eth { background: var(--coin-eth-color); }
+.fill-bar.alt { background: var(--coin-alt-color); }
+
+
+/* --- CSV DOWNLOAD BUTTON --- */
+.download-csv-btn {
+  width: 100%;
+  margin-top: 25px; /* Increased margin */
+  padding: 15px;
+  background: var(--gold-primary); /* Use primary gold */
+  color: var(--bg-dark); /* Dark text on gold */
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+.download-csv-btn:hover {
+  transform: translateY(-2px);
+  background-color: var(--gold-light);
+}
+
+/* --- EMPTY STATE MESSAGE --- */
+.empty-strategy-message {
+  text-align: center;
+  padding: 50px;
+  color: var(--text-muted);
+  border: 2px dashed var(--bg-lighter); /* Dashed lighter border */
+  border-radius: 12px;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .strategy-mixer-container {
+    padding: 15px;
+  }
+  .strategy-buttons-group {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: stretch;
+  }
+  .strategy-btn {
+    min-width: unset; /* Remove min-width for stacking */
+  }
+  .allocation-info-row {
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 5px;
+  }
+  .coin-details {
+    flex-basis: 100%; /* Full width for coin name and price */
+    justify-content: center;
+  }
+  .target-details {
+    flex-basis: 100%; /* Full width for target details */
+    text-align: center;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mixer-header h2 {
+    font-size: 1.5rem;
+  }
+  .mixer-header .total-capital span {
+    font-size: 1rem;
+  }
+  .allocation-breakdown-container h4 {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+}
