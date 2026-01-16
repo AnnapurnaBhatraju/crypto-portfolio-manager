@@ -1,0 +1,5 @@
+coin,amount,live_price,status
+Bitcoin,2362.67,96796,STABLE
+Ethereum,902.36,3367.27,STABLE
+Solana,1710.82,145.39,STABLE
+Cardano,24.14,0.404072,DANGER
