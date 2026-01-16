@@ -68,7 +68,35 @@ The Risk Engine evaluates assets using a percentage-based threshold system:
 
 ---
 
+## 🟣 MILESTONE 4 (Weeks 7-8): Module 3 - Rule Setter & Stress Testing (Final Release)
+It introduces advanced user autonomy through dynamic rule setting ("Rule Based Mixing") and portfolio resilience testing ("Hard Situation" Simulator).
+
+| Milestone 4 Requirement | Technical Implementation | Status |
+| :--- | :--- | :--- |
+| **Rule Setter Module** |	Created a dynamic constraint engine allowing users to mix Fixed Amounts ($) and Percentages (%) simultaneously.	| **COMPLETED** |
+| **"Hard Situation" Tester** |	Implemented StrategyMixer.js to simulate different market conditions (Safe, Balanced, Risk) and adjust weights automatically.	| **COMPLETED** |
+| **Constraint Logic** |	Algorithm processes fixed dollar allocations first, then distributes remaining capital proportionally based on percentage rules.	| **COMPLETED** |
+| **Conflict Resolution** |	Built-in validation prevents over-allocation (>100% budget) and guides the user to use "Remaining" logic.	| **COMPLETED** |
+| **Final UI Polish** |	Unified the entire application under the "Royal Blue & Gold" theme with responsive layouts and sticky footers.	| **COMPLETED** |
+
+**🧠 Core Logic: The Rule Engine**
+The Rule-Based Mixer uses a Constraint Satisfaction Algorithm to generate portfolios:
+
+- Priority 1 (Fixed Constraints): All rules defining a specific dollar amount (e.g., "$2000 in ETH") are deducted from the Total Budget first.
+- Priority 2 (Percentage Constraints): Remaining budget is calculated. Specific percentage rules (e.g., "50% BTC") are applied to the remaining amount (or total, depending on user configuration).
+- Priority 3 (The "Remaining" Bucket): Any capital left over after Priority 1 & 2 is swept into the specific asset defined as "Remaining" (e.g., USDT) to ensure 0% wasted capital.
+
+**🛡️ Core Logic: Stress Testing (Strategy Mixer)**
+The system allows users to rebalance their existing portfolio based on market volatility predictions:
+
+* 🛡️ **SAFE Mode**: Prioritizes Stablecoins (50%) and King Assets (BTC 25%) to preserve capital during crashes.
+* ⚖️ **BALANCED Mode**: Shifts focus to Core L1s (ETH, SOL 40%) and BTC (30%) for steady growth.
+* 🚀 **RISK Mode**: allocate heavily into High-Beta Alts (60%) and Core L1s (25%) for maximum aggressive growth during bull runs.
+
+---
+
 ### Project Documentation
 * [Google Drive Documentation (Team Log)](https://drive.google.com/drive/folders/1_WbgdxV89VtGe2Fkis5hRO7FPAJBTwbS)
 
 ---
+
