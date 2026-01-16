@@ -1,0 +1,418 @@
+/* Dashboard.css - Royal Blue & Gold Theme */
+
+/* Import existing variables for consistency */
+/* In a real project, these would often be in a shared 'variables.css' file */
+:root {
+  /* BACKGROUNDS */
+  --bg-dark: #020c1b;        /* Deep Navy */
+  --bg-panel: #0a192f;       /* Panel Blue */
+  --bg-lighter: #112240;     /* Highlight Blue */
+  
+  /* ACCENTS */
+  --gold-primary: #d4af37;   /* Metallic Gold */
+  --gold-light: #fbeda4;     /* Champagne */
+  --gold-dim: #8a7018;       /* Bronze */
+  
+  /* TEXT */
+  --text-main: #e6f1ff;
+  --text-muted: #8892b0;
+  
+  /* Additional for dashboard */
+  --success-color: #2E7D32; /* Keeping your green for success messages */
+  --danger-color: #e53935;  /* Keeping your red for danger/delete */
+  --info-color: #1976d2;    /* Keeping your blue for info/download */
+}
+
+.dashboard-container {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif; /* Consistent with Intro.css */
+  background-color: var(--bg-dark); /* Use main background */
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* --- NAV TABS --- */
+.dashboard-nav-tabs {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 15px;
+  border-bottom: 1px solid var(--bg-lighter);
+  padding-bottom: 5px;
+}
+
+.dashboard-nav-tabs button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  flex-grow: 1; /* Make buttons expand evenly */
+  max-width: 250px; /* Limit width */
+}
+
+.dashboard-nav-tabs button.active {
+  background: var(--gold-primary);
+  color: var(--bg-dark); /* Dark text on gold */
+  border-bottom: 3px solid var(--gold-primary); /* Stronger active indicator */
+  box-shadow: 0 -2px 10px rgba(212, 175, 55, 0.2);
+}
+
+.dashboard-nav-tabs button.inactive {
+  background: var(--bg-panel);
+  color: var(--text-muted);
+  border-bottom: 3px solid transparent;
+}
+
+.dashboard-nav-tabs button.inactive:hover {
+  background: var(--bg-lighter);
+  color: var(--text-main);
+}
+
+/* --- CARD STYLE --- */
+.dashboard-card {
+  background: var(--bg-panel); /* Use a panel background */
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(212, 175, 55, 0.1); /* Subtle gold border */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- MONITOR VIEW --- */
+.monitor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.monitor-header h3 {
+  color: var(--gold-primary); /* Gold for important headings */
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.monitor-header .sync-status {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-left: 10px;
+}
+
+.download-btn {
+  background-color: var(--info-color); /* Use a consistent info blue */
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+.download-btn:hover {
+  background-color: #1565c0; /* Slightly darker blue */
+}
+
+.holdings-list {
+  /* No specific styling needed beyond the rows */
+}
+
+.holding-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  border-bottom: 1px solid var(--bg-lighter); /* Lighter border */
+  transition: background-color 0.2s;
+}
+.holding-row:last-child {
+  border-bottom: none;
+}
+.holding-row:hover {
+  background-color: rgba(212, 175, 55, 0.05); /* Subtle gold highlight on hover */
+}
+
+.holding-row span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.holding-coin {
+  width: 20%;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-main);
+}
+.holding-amount {
+  width: 20%;
+  color: var(--text-main);
+}
+.holding-price {
+  width: 20%;
+  color: var(--text-muted);
+}
+.holding-status {
+  width: 25%;
+  font-weight: bold;
+}
+.holding-status.danger {
+  color: var(--danger-color);
+}
+.holding-status.safe {
+  color: var(--success-color);
+}
+
+.delete-btn {
+  color: white;
+  border: none;
+  background: var(--danger-color); /* Use danger red */
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s;
+}
+.delete-btn:hover {
+  background: #c62828; /* Slightly darker red */
+}
+
+.empty-portfolio {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-muted);
+}
+
+.create-mix-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: var(--gold-primary); /* Primary button color */
+  color: var(--bg-dark);
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+.create-mix-btn:hover {
+  transform: translateY(-2px);
+  background-color: var(--gold-light);
+}
+
+/* --- MIXER VIEW --- */
+.mixer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mixer-header h3 {
+  color: var(--gold-primary);
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.clear-selection-btn {
+  background: none;
+  border: none;
+  color: var(--danger-color);
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.clear-selection-btn:hover {
+  color: #c62828; /* Slightly darker red */
+}
+
+.coin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid */
+  gap: 10px;
+}
+
+.coin-button {
+  padding: 12px;
+  border: 1px solid var(--bg-lighter); /* Lighter border */
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--bg-lighter); /* Lighter panel background */
+  color: var(--text-main);
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+.coin-button:hover:not(.selected) {
+  background-color: rgba(212, 175, 55, 0.1); /* Subtle gold hover */
+  border-color: var(--gold-primary);
+}
+
+.coin-button.selected {
+  background-color: var(--gold-primary);
+  color: var(--bg-dark); /* Dark text on gold */
+  font-weight: bold;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.mixer-controls {
+  margin-top: 25px; /* Increased margin */
+  background: var(--bg-lighter); /* Use lighter panel background */
+  padding: 18px; /* Slightly more padding */
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 15px; /* Spacing between elements */
+}
+
+.mixer-controls label {
+  color: var(--text-main);
+  font-weight: bold;
+}
+
+.mixer-controls input[type="number"] {
+  padding: 8px;
+  width: 120px; /* Increased width */
+  border-radius: 4px;
+  border: 1px solid var(--text-muted);
+  background-color: var(--bg-dark); /* Dark input background */
+  color: var(--text-main);
+  margin-left: 10px;
+}
+.mixer-controls input[type="number"]:focus {
+  outline: none;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+}
+
+.generate-mix-btn {
+  /* No margin-left here due to flex gap */
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: var(--gold-primary); /* Primary gold button */
+  color: var(--bg-dark);
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  transition: transform 0.2s, background-color 0.2s;
+  flex-grow: 1; /* Allow button to grow */
+  max-width: 250px; /* Limit width */
+}
+.generate-mix-btn:hover {
+  transform: translateY(-2px);
+  background-color: var(--gold-light);
+}
+
+/* --- AI RESULTS AREA --- */
+.ai-results {
+  margin-top: 30px; /* More margin */
+  padding: 25px; /* More padding */
+  background-color: var(--bg-lighter); /* Lighter panel background */
+  border-radius: 10px;
+  border: 1px solid var(--gold-dim); /* Subtle gold border */
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.ai-results h4 {
+  margin-top: 0;
+  color: var(--gold-primary); /* Gold for result heading */
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.ai-mix-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--bg-lighter); /* Dashed lighter border */
+  padding: 8px 0;
+  color: var(--text-main);
+}
+.ai-mix-item strong {
+  color: var(--gold-light);
+}
+.ai-mix-item:last-child {
+  border-bottom: none;
+}
+
+.finalize-btn {
+  width: 100%;
+  background-color: var(--success-color); /* Keeping your green for save/finalize */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.finalize-btn:hover {
+  background-color: #266b2a; /* Slightly darker green */
+  transform: translateY(-2px);
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 15px;
+  }
+  .dashboard-nav-tabs {
+    flex-wrap: wrap; /* Allow tabs to wrap */
+  }
+  .dashboard-nav-tabs button {
+    flex-basis: 48%; /* Roughly half width */
+    max-width: none;
+  }
+  .monitor-header, .mixer-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .holding-row {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .holding-coin, .holding-amount, .holding-price, .holding-status {
+    width: auto; /* Allow content to dictate width */
+    flex-basis: 48%; /* Two columns per row */
+  }
+  .holding-status {
+    flex-basis: 100%; /* Status on its own line */
+    text-align: center;
+  }
+  .delete-btn {
+    width: 100%; /* Full width delete button */
+    margin-top: 10px;
+  }
+  .mixer-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .mixer-controls input[type="number"] {
+    width: 100%;
+    margin-left: 0;
+  }
+  .generate-mix-btn {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .coin-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Smaller buttons */
+  }
+  .dashboard-nav-tabs button {
+    flex-basis: 100%; /* One tab per row */
+    border-radius: 8px; /* Full rounded corners when stacked */
+  }
+  .dashboard-nav-tabs button.active {
+    border-bottom: 3px solid var(--gold-primary); /* Still show active indicator */
+  }
+}
