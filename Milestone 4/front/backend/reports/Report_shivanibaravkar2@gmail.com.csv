@@ -1,0 +1,7 @@
+coin,amount,live_price,status
+Bitcoin,1966.25,96767,STABLE
+Ethereum,516.32,3364.99,STABLE
+Solana,1557.91,145.35,STABLE
+Avalanche,16.33,0,UNKNOWN
+Chainlink,777.78,14.02,DANGER
+Polygon,165.41,0,UNKNOWN
