@@ -6,6 +6,8 @@ This repository hosts the source code for the Crypto Portfolio Manager, a system
 
 ---
 
+[Live Demo](https://crypto-portfolio-managers.onrender.com)
+
 ## Project Architecture
 
 The system is built using a **Decoupled Two-Tier Architecture**, ensuring the front-end and back-end are independent and communicate securely via API calls.
